@@ -5,6 +5,8 @@
 
 ---
 
+## 👥 Команда «502 Bad Gateway»
+
 ## 🎯 Проблематика и контекст
 По данным Аналитического центра НАФИ, **более 82% российских школьников** регулярно получают карманные деньги, но **менее 20%** ведут их осознанный учет. До 80% родителей переводят средства ситуативно, без связи с личными целями ребенка и полезными привычками.
 
@@ -45,4 +47,19 @@
 Создайте файл `.env` или передайте параметры в `application.properties`:
 ```properties
 TELEGRAM_BOT_USERNAME=vtb_family_hub_demo_bot
-TELEGRAM_BOT_TOKEN=ваш_токен_от_BotFather
+TELEGRAM_BOT_TOKEN=YOUR_BOT_TOKEN_HERE
+```
+### 2. Запуск через Docker Compose
+
+    docker compose up -d --build
+
+Сервис будет доступен:
+- Веб-интерфейс: `http://localhost:8080`
+- Swagger UI (OpenAPI документация): `http://localhost:8080/swagger-ui.html`
+
+### 3. Локальный запуск из исходников
+
+    mvn clean package -DskipTests
+    java -jar target/familyhub-0.0.1-SNAPSHOT.jar
+
+---
