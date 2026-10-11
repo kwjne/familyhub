@@ -1,0 +1,6 @@
+.git
+.env
+.env.*
+target
+*.zip
+family_hub_src
